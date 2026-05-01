@@ -1,6 +1,4 @@
-from attr import Out
-
-from value import Value
+from micrograd.day02_implementation.value import Value
 import random
 
 class Module:
@@ -20,7 +18,7 @@ class Neuron(Module):
     # w*x + b
     def __call__(self, xs):
         val = sum([x * w for x, w in zip(xs, self.ws)], self.b)
-        act = val.sigmoid()
+        act = val.tanh()
         return act
 
     def parameters(self):

@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "nn-foundations-lab"
 version = "0.1.0"
@@ -9,4 +13,8 @@ dependencies = [
     "matplotlib>=3.10.9",
     "notebook>=7.5.5",
     "numpy>=2.4.4",
+    "scikit-learn>=1.8.0",
+    "torch>=2.11.0",
 ]
+
+[tool.setuptools.packages.find]
